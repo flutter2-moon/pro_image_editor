@@ -142,14 +142,17 @@ class MainEditorInteractiveContent extends StatelessWidget {
 
           /// Build video controls
           if (isVideoEditor)
-            AnimatedSwitcher(
-              duration: configs.layerInteraction.videoControlsSwitchDuration,
-              child: isLayerSelected
-                  ? const SizedBox.shrink()
-                  : VideoEditorConfigurable(
-                      controller: videoController!,
-                      child: const VideoEditorControlsWidget(),
-                    ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30),
+              child: AnimatedSwitcher(
+                duration: configs.layerInteraction.videoControlsSwitchDuration,
+                child: isLayerSelected
+                    ? const SizedBox.shrink()
+                    : VideoEditorConfigurable(
+                        controller: videoController!,
+                        child: const VideoEditorControlsWidget(),
+                      ),
+              ),
             ),
 
           /// Build helper content
