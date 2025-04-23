@@ -31,7 +31,7 @@ class VideoEditorControlsWidget extends StatelessWidget {
               verticalDirection:
                   alignTop ? VerticalDirection.down : VerticalDirection.up,
               children: [
-                const VideoEditorTrimBar(),
+                //const VideoEditorTrimBar(),
                 Padding(
                   padding: player.contentPadding,
                   child: LayoutBuilder(
