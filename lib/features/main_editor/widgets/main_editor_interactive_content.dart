@@ -142,9 +142,7 @@ class MainEditorInteractiveContent extends StatelessWidget {
 
           /// Build video controls
           if (isVideoEditor)
-            Padding(
-              padding: const EdgeInsets.only(top: 30),
-              child: AnimatedSwitcher(
+            AnimatedSwitcher(
                 duration: configs.layerInteraction.videoControlsSwitchDuration,
                 child: isLayerSelected
                     ? const SizedBox.shrink()
@@ -153,7 +151,6 @@ class MainEditorInteractiveContent extends StatelessWidget {
                         child: const VideoEditorControlsWidget(),
                       ),
               ),
-            ),
 
           /// Build helper content
           if (!processFinalImage) ...[
