@@ -43,7 +43,7 @@ class VideoEditorControlsWidget extends StatelessWidget {
                           children: [
                             if (isAudioSupported) ...[
                               const VideoEditorMuteButton(),
-                              const SizedBox(width: 12),
+                              const SizedBox(width: 40),
                             ],
                             const VideoEditorInfoBanner(),
                             const Spacer(),
